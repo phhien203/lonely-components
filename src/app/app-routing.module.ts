@@ -9,6 +9,13 @@ const routes: Routes = [
         (m) => m.HeroListComponent
       ),
   },
+  {
+    path: 'cool-feature',
+    loadChildren: () =>
+      import('./cool-feature/cool-feature.module').then(
+        (m) => m.CoolFeatureModule
+      ),
+  },
 ];
 
 @NgModule({
